@@ -9,11 +9,13 @@ El objetivo es identificar pólizas de automotores con riesgo de cancelación pa
 
 Link de descarga del dataset: https://drive.google.com/file/d/1H2_T2xycHODlPM7hkc1sbxweu6Q7ZE23/view?usp=sharing
 
-3. Desde la carpeta principal del repositorio, creá y activá el entorno virtual
+3. Desde la carpeta principal del repositorio, creá y activá el entorno virtual según tu terminal.
 
-   ```bash
-  python -m pip install -r requirements.txt
-   ```
+   | Terminal | Crear el entorno | Activarlo |
+   |---|---|---|
+   | macOS o Linux | `python3 -m venv .venv` | `source .venv/bin/activate` |
+   | Windows PowerShell | `py -m venv .venv` | `.\.venv\Scripts\Activate.ps1` |
+   | Windows CMD | `py -m venv .venv` | `.venv\Scripts\activate.bat` |
 
 4. Con el entorno virtual activo, instalá las dependencias del proyecto.
 
@@ -33,8 +35,8 @@ Las métricas se calcularon sobre 33.627 pólizas de prueba, con la cancelación
 
 | Modelo | Accuracy | Precision | Recall | F1-score |
 |---|---:|---:|---:|---:|
-| Regresión logística | 0,6694 | 0,2217 | 0,6671 | 0,3328 |
-| Random Forest | 0,8342 | 0,3841 | 0,5660 | 0,4576 |
+| Regresión logística | 0,6693 | 0,2217 | 0,6671 | 0,3328 |
+| Random Forest | 0,8339 | 0,3837 | 0,5668 | 0,4576 |
 
 Para una campaña que busca detectar la mayor cantidad posible de bajas, se prioriza el **Recall**. La regresión logística identificó 2.773 de las 4.157 cancelaciones reales. Las 1.384 restantes fueron falsos negativos: si el equipo de retención contactara únicamente a las pólizas señaladas, esas quedarían fuera de la campaña.
 
